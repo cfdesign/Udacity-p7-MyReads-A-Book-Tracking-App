@@ -1,4 +1,28 @@
-# MyReads Project
+# MyReads App
+
+In short, this app stores books. Each book has a drop down selection for “currently reading”, “want to read”, “read” or "none"
+
+In the “bookshelf view” the app displays books and places them on a mockup bookshelf, on the appropriate shelf. Each time the drop down selection is changed the book moves shelf. If "none" is selected it will be removed from all bookshelves, but can be returned by searching for it again.
+
+In “Search view” there is a search box and the search returns books based on the search query. The search terms are limited to a moderate list of words which are indicated below. Search terms will look up author and/or title. Each book that is returned from a search is checked to see if it is already assigned to a bookshelf, if so then the drop down selector shows which category it is currently under. Books not on the "bookshelf view" can be moved onto the shelf with the drop down selecting either “currently reading”, “want to read” or “read”.
+
+## Search word/terms limitations
+
+The search words are limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will return results, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results. Searches are limited to show 20 results only, to narrow a search, choose a more specific search term.
+
+
+## To install the app:
+
+* Download or clone the repository for 'reactnd-project-myreads-starter'
+* Open Terminal on your computer and change directory (cd) into the 'reactnd-project-myreads-starter' folder
+
+The following two lines must be entered into Termimal to install and automatically start the app in your browser. **Please allow time** for each step to fully complete & install before proceeding with the next.
+* install all project dependencies with `npm install`
+* start the development server with `npm start`
+
+## TL;DR
+
+# FOR DEVELOPERS (the rest is for you)
 
 This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
 
@@ -63,7 +87,7 @@ update(book, shelf)
 ```
 
 * book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
+* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]
 * Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
 ### `search`
